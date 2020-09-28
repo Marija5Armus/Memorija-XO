@@ -1,0 +1,1111 @@
+@font-face {
+  font-family: watchFont;
+  src: url(fonts/Philosopher/Philosopher-Regular.ttf);
+  font-family: myFont;
+  src: url(fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf);
+}
+:root {
+  --primary-color: #9b7569;
+  --dark-color: #252525;
+  --light-color: #fff;
+  --category-dark: #234;
+  --category-light: #edd6c6;
+  --form-gray: #9d8f86;
+  --form-light: #9dc6b8;
+  --line-color: rgba(196, 196, 196, 0.5);
+  --max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 500px) {
+  body .container {
+    min-height: 650vh;
+    overflow: hidden;
+  }
+
+  body .container .wrap {
+    display: grid;
+    min-height: 650vh !important;
+    grid-template-rows: 13vh 56vh 75vh 95vh 180vh 115vh 125vh !important;
+    overflow: hidden;
+  }
+
+  body .container .wrap header {
+    display: block;
+    overflow: hidden !important;
+    min-height: 12vh;
+    max-height: 12.5vh;
+  }
+  body .container .wrap header .contact,
+  body .container .wrap header .social i,
+  body .container .wrap header .contact i,
+  body .container .wrap header .join a {
+    font-size: 20pt;
+    min-height: 3vh;
+    text-transform: uppercase;
+  }
+  body .container .wrap nav {
+    min-height: 56vh !important;
+    max-height: 26.5vh;
+    width: 100vw;
+    margin-left: 1vw;
+    margin-top: 0;
+    display: grid;
+    grid-template-areas: "a" "b";
+    font-size: 5pt;
+    overflow: hidden !important;
+    background-color: var(--category-light);
+  }
+  body .container .wrap nav .menu {
+    display: none;
+  }
+  body .container .wrap nav .logo {
+    grid-area: a;
+    max-height: 15vh;
+    overflow: hidden;
+  }
+  body .container .wrap nav .logo h1 {
+    font-size: 20pt;
+    margin-top: 3vh;
+    padding-left: 4vw;
+    text-align: center;
+  }
+  body .container .wrap nav .logo h4 {
+    font-size: 15pt;
+    text-align: center;
+    max-height: 7vh;
+    padding-left: 4vw;
+  }
+  body .container .wrap nav .logo .hamburger {
+    height: 4vh;
+    float: right;
+    margin-top: -4vh;
+    color: var(--dark-color);
+  }
+  body .container .wrap nav .logo .hamburger i {
+    height: 3vh;
+    width: auto;
+    cursor: pointer;
+  }
+
+  body .container .wrap nav .mobile-nav {
+    grid-area: b;
+    min-width: 65vw;
+    height: 40vh !important;
+
+    font-size: 10pt;
+    overflow: hidden;
+    display: inline-block !important;
+  }
+  body .container .wrap nav .mobile-nav ul li {
+    display: block !important;
+  }
+  body .container .wrap nav .mobile-nav ul li {
+    font-size: 8pt;
+    text-align: center !important;
+    margin-top: 4vh;
+    margin-left: 4vw;
+
+    display: inline-block;
+  }
+
+  body .container .wrap nav .mobile-nav ul li a {
+    font-size: 12pt;
+    color: var(--dark-color);
+    font-weight: normal;
+    font-family: watchFont;
+  }
+
+  body .container .wrap .slider {
+    top: 2vh;
+    min-height: 75vh !important;
+    overflow: hidden;
+  }
+
+  body .container .wrap .categories {
+    margin-top: 0vh;
+    min-height: 95vh !important;
+
+    overflow: hidden;
+  }
+  body .container .wrap .categories article {
+    max-height: 80vh;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+  }
+  body .container .wrap .categories article .ladies,
+  body .container .wrap .categories article .men {
+    height: inherit;
+  }
+
+  body .container .wrap .products {
+    max-height: 180vh !important;
+    min-height: 180vh;
+    overflow: hidden;
+  }
+  body .container .wrap .products section {
+    max-height: 160vh;
+    min-height: 160vh;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  body .container .wrap .products section .watch {
+    height: auto;
+    overflow: hidden;
+    width: 28.5vw;
+    padding-top: 1vh !important;
+  }
+  body .container .wrap .products section .watch img {
+    max-height: auto;
+    min-height: 20vh;
+    width: inherit;
+  }
+
+  body .container .wrap .brands {
+    max-height: 110vh !important;
+    width: var(--max-width);
+    overflow: hidden;
+  }
+  body .container .wrap .brands .col {
+    display: grid;
+    grid-template-columns: auto auto !important;
+    grid-gap: 0.4vh;
+    max-height: 100vh;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  body .container .wrap .brands .col img {
+    min-width: 25vw;
+    padding: 1vh 0.5vw;
+  }
+
+  body .container .wrap footer {
+    min-height: 120vh !important;
+    overflow: hidden;
+  }
+  body .container .wrap footer .end {
+    height: 5vh;
+    width: 95vw;
+    margin-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 720px) /* and (min-width: 500px) */ {
+  * {
+    font-size: 13pt;
+  }
+  h1 {
+    font-size: 35pt;
+    font-weight: normal;
+    padding-left: 26vw;
+    text-align: left;
+  }
+  h2 {
+    font-size: 17pt;
+  }
+  h4 {
+    font-size: 18pt;
+    font-weight: normal;
+    padding-left: 13vw;
+    text-align: left;
+  }
+  body .container .wrap .card-heading-white,
+  body .container .wrap .card-heading-black {
+    height: 10vh;
+    overflow: hidden;
+  }
+  body .container .wrap .card-heading-white .line-heading,
+  body .container .wrap .card-heading-black .line-heading {
+    font-size: 1.5rem;
+  }
+  body .container {
+    height: 570vh;
+    overflow: hidden;
+  }
+
+  body .container .wrap {
+    display: grid;
+    height: 570vh;
+    grid-template-rows: 8vh 22vh 75vh 120vh 120vh 115vh 120vh;
+    overflow: hidden;
+  }
+  /* header */
+  body .container .wrap header {
+    height: 8vh;
+  }
+  body .container .wrap header .contact,
+  body .container .wrap header .social i,
+  body .container .wrap header .contact i,
+  body .container .wrap header .join a {
+    font-size: 10pt;
+    height: 2.5vh;
+  }
+  /* nav */
+  body .container .wrap nav {
+    height: 22vh;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    bottom: 0;
+    top: 0;
+  }
+  body .container .wrap nav .logo .hamburger {
+    display: none;
+  }
+  body .container .wrap nav .logo {
+    margin-left: 1vw;
+  }
+
+  body .container .wrap nav .menu {
+    margin-top: 3vh;
+    margin-left: -2vw;
+    min-width: 95vw;
+    justify-content: space-evenly;
+    font-size: 16.5pt;
+    overflow: hidden;
+  }
+  body .container .wrap nav .menu ul li {
+    justify-content: center;
+    overflow: hidden;
+  }
+  body .container .wrap nav .menu ul li a {
+    margin-right: 3vw;
+    font-size: 17pt;
+  }
+  body .container .wrap nav .mobile-nav {
+    display: none;
+  }
+  /* slider */
+  body .container .wrap .slider {
+    top: 2vh;
+    height: 75vh;
+    background-size: cover;
+    padding-top: 0vw;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 5vw;
+  }
+  body .container .wrap .slider .text {
+    min-width: 90vw;
+    overflow: hidden;
+    margin-left: 1vw;
+    height: 65vh;
+    min-height: 50vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    justify-content: space-between;
+    text-align: center;
+    display: block;
+    align-content: center;
+    line-height: 3vh;
+    font-size: 1rem;
+    align-items: center;
+    margin-top: 5vh;
+  }
+  body .container .wrap .slider .text h2 {
+    font-weight: normal;
+  }
+  body .container .wrap .slider .text p {
+    overflow: hidden;
+    text-align: justify;
+    overflow: hidden;
+    font-size: 11.5pt;
+    height: 60%;
+    margin-top: 5vh;
+  }
+  /* categories */
+
+  body .container .wrap .categories {
+    margin-top: 0vh;
+    min-height: 120vh;
+    height: 120vh;
+  }
+
+  body .container .wrap .categories article {
+    display: grid;
+    margin-left: 10vw;
+    grid-template-areas: "l" "m";
+
+    padding-left: 3vw;
+    padding-right: 3vw;
+    height: 110vh;
+    margin-top: 0vh;
+    overflow: hidden;
+  }
+  body .container .wrap .categories article .ladies {
+    grid-area: l;
+    height: auto;
+    width: 55vw;
+    overflow: hidden;
+    margin-top: 0vh;
+  }
+  body .container .wrap .categories article .men {
+    grid-area: m;
+    height: auto;
+    width: 55vw;
+    overflow: hidden;
+  }
+  body .container .wrap .categories article .ladies img,
+  body .container .wrap .categories article .men img {
+    height: inherit;
+    width: inherit;
+  }
+  body .container .wrap .categories article .ladies .buy,
+  body .container .wrap .categories article .men .buy {
+    width: inherit;
+    border: radius 1vw;
+  }
+  body .container .wrap .categories article .ladies .buy #lady,
+  body .container .wrap .categories article .men .buy #man {
+    width: 100%;
+  }
+  /* products */
+  body .container .wrap .products {
+    height: 120vh;
+    overflow: hidden;
+  }
+  body .container .wrap .products section {
+    height: 100vh;
+  }
+  body .container .wrap .products section .watch .desc {
+    font-size: 10pt;
+    margin-top: -8vh;
+    width: 30vw;
+  }
+  body .container .wrap .products section .watch p {
+    margin-top: -2vh;
+    width: 30vw;
+  }
+
+  /* brands */
+  body .container .wrap .brands {
+    height: 115vh;
+    width: var(--max-width);
+    overflow: hidden;
+  }
+  body .container .wrap .brands .col {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.5vh;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  body .container .wrap .brands .col img {
+    width: 13vw;
+    padding: 3vh 1vw;
+  }
+
+  /* footer */
+  body .container .wrap footer {
+    height: 120vh;
+  }
+  .container .wrap #message,
+  .container .wrap #textarea {
+    font-size: 0.9rem;
+  }
+  .container .wrap footer .form .searchForm form #button,
+  .container .wrap footer .form .searchForm form #search,
+  .container .wrap footer .form .contactForm form #name,
+  .container .wrap footer .form .contactForm form #subject,
+  .container .wrap footer .form .contactForm form #submit {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 920px) /* and (min-width: 720px) */ {
+  .container {
+    height: 480vh;
+    overflow: hidden;
+  }
+  .container .wrap {
+    display: grid;
+    height: 480vh;
+    grid-template-rows: 10vh 20vh 70vh 60vh 120vh 90vh 115vh;
+    overflow: hidden;
+  }
+  .container .wrap .brands .card-heading-white,
+  .container .wrap .card-heading-black {
+    height: 10vh;
+    overflow: hidden;
+  }
+  /* HEADER */
+  .container .wrap header {
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    font-size: 13pt;
+    overflow: hidden;
+  }
+  /* NAV */
+  .container .wrap nav {
+    margin-top: 1vh;
+    overflow: hidden;
+    height: 20vh;
+  }
+  .container .wrap nav .menu {
+    max-width: 60vw;
+    overflow: hidden;
+  }
+  .container .wrap nav .menu ul li {
+    margin-left: 1vw;
+    font-size: 16pt;
+  }
+  .container .wrap nav .mobile-nav {
+    display: none;
+  }
+  body .container .wrap nav .logo .hamburger {
+    display: none;
+  }
+  /* SLIDER */
+  .container .wrap .slider {
+    height: 70vh;
+    overflow: hidden;
+    background-size: contain;
+    align-items: left;
+  }
+  .container .wrap .slider .text {
+    text-align: justify;
+    padding: 2vw;
+    border-radius: 1vh;
+    width: 45vw;
+    height: 50vh;
+    overflow: hidden;
+    justify-content: space-around;
+    margin-top: 11vh;
+    line-height: 2.5vh;
+    font-size: 1rem;
+    background-color: #25252592;
+  }
+  .container .wrap .slider .text h2 {
+    font-size: 26pt;
+  }
+  .container .wrap .slider .text h2,
+  .container .wrap .slider .text .button a {
+    text-align: center;
+  }
+  /* CATEGORIES */
+  .container .wrap .categories {
+    margin-top: 1vh;
+    height: 60vh;
+    overflow: hidden;
+  }
+  .container .wrap .categories .card-heading-white {
+    height: 7vh;
+    overflow: hidden;
+  }
+  .container .wrap .categories article {
+    height: 60vh;
+    overflow: hidden;
+  }
+  .container .wrap .categories article .ladies img,
+  .container .wrap .categories article .men img {
+    width: 35vw;
+    height: auto;
+    overflow: hidden;
+  }
+  .container .wrap .categories article .ladies .buy a,
+  .container .wrap .categories article .men .buy a {
+    font-size: 12pt;
+  }
+  /* PRODUCTS */
+  .container .wrap .products {
+    max-height: 120vh;
+    display: block;
+    overflow: hidden;
+  }
+  .container .wrap .products section {
+    height: 100vh;
+    top: 2vh;
+    grid-template-columns: auto auto;
+    grid-gap: 4vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .container .wrap .products section .watch {
+    height: 49vh;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .container .wrap .products section .watch img {
+    height: auto;
+    overflow: hidden;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .container .wrap .products section .watch p {
+    bottom: 10vh;
+    overflow: hidden;
+    font-size: 11pt;
+    text-align: center;
+  }
+  .container .wrap .products section .watch span {
+    margin-left: 18vh;
+    font-size: 12pt;
+    overflow: hidden;
+    border-radius: 2px;
+    padding: 2px;
+  }
+  .container .wrap .products section .watch .desc {
+    font-size: 8pt;
+    overflow: hidden;
+    bottom: 5vh;
+    width: 15vw;
+  }
+  /* BRANDS */
+  .container .wrap .brands {
+    height: 85vh;
+    overflow: hidden;
+  }
+  .container .wrap .brands .col {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 75vh;
+    justify-content: space-between;
+  }
+  /* FOOTER */
+  .container .wrap footer {
+    height: 115vh;
+    width: var(--max-width);
+    overflow: hidden;
+    text-align: center;
+  }
+  .container .wrap footer .form {
+    display: grid;
+    grid-template-areas: "c" "s";
+    width: 99%;
+    height: 85vh;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .container .wrap footer .form .contactForm {
+    grid-area: c;
+    justify-content: center;
+    display: block;
+    width: 90vw;
+    height: 44vh;
+    overflow: hidden;
+  }
+  .container .wrap footer .form .searchForm {
+    grid-area: s;
+    justify-content: center;
+    display: block;
+    width: 90vw;
+    height: 39vh;
+    overflow: hidden;
+    align-items: center;
+    padding: 0%;
+  }
+  .container .wrap footer .form .searchForm form {
+    display: block;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    width: 99%;
+    padding-top: 2vh;
+  }
+  .container .wrap #message,
+  .container .wrap #textarea {
+    height: 20vh;
+    width: 90%;
+  }
+  .container .wrap footer .form .searchForm form #button,
+  .container .wrap footer .form .searchForm form #search,
+  .container .wrap footer .form .contactForm form #name,
+  .container .wrap footer .form .contactForm form #subject,
+  .container .wrap footer .form .contactForm form #submit {
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin: 0.5vw;
+    width: 90%;
+    height: 4vh;
+  }
+  .container .wrap footer .end {
+    height: 5vh;
+    margin-top: 5vh;
+  }
+}
+/*---------------------------
+# basic style
+----------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: watchFont;
+}
+a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+i {
+  color: var(--light-color);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: myFont;
+}
+.container {
+  display: grid;
+  grid-template-rows: 5vh 18vh 80vh 85vh 90vh 90vh 100vh;
+  overflow: hidden;
+  z-index: -2;
+  justify-content: center;
+}
+.wrap {
+  overflow: hidden;
+  border: 1px solid purple;
+  height: 470vh;
+  width: 100vw;
+  justify-content: justify;
+}
+.card-heading-white {
+  grid-area: w;
+  height: 15vh;
+  color: var(--category-dark);
+  text-align: center;
+  padding: 1px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 1vh;
+}
+.card-heading-black {
+  grid-area: b;
+  height: 15vh;
+  color: var(--category-light);
+  text-align: center;
+  padding: 1px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 1vh;
+  background-color: var(--category-dark);
+}
+.line {
+  height: 0.5vh;
+  width: 25vw;
+  background-color: var(--line-color);
+}
+
+.line-heading {
+  text-align: center;
+  font-size: 2rem;
+  padding: 3vh 3vw;
+  font-family: myFont;
+}
+/*---------------------------
+# header
+----------------------------*/
+header {
+  height: 5vh;
+  width: var(--max-width);
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12pt;
+  text-align: center;
+  overflow: hidden;
+}
+.contact {
+  text-transform: uppercase;
+  display: inline;
+}
+.contact > i,
+.social > i {
+  height: 3vh;
+  width: auto;
+  cursor: pointer;
+  margin-right: 5pt;
+}
+.social i:hover,
+.contact i:hover,
+.join a:hover {
+  opacity: 0.8;
+}
+/*---------------------------
+# nav
+----------------------------*/
+nav {
+  height: 17vh;
+  width: var(--max-width);
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-gap: 4vw;
+  font-size: 20pt;
+  align-items: center;
+  margin-left: 12vw;
+  overflow: hidden;
+  margin-top: 3vh;
+}
+nav > h1 {
+  font-size: 23pt;
+}
+nav > h4 {
+  font-size: 12pt;
+}
+.container > nav > .mobile-nav {
+  display: none;
+}
+body .container .wrap nav .logo .hamburger {
+  display: none;
+}
+nav > .menu > ul > li {
+  display: inline-block;
+  text-align: center;
+  margin-left: 4vw;
+  font-size: 20pt;
+}
+.menu ul li a {
+  color: var(--dark-color);
+  font-weight: normal;
+  font-family: watchFont;
+}
+.dark-color {
+  color: var(--primary-color);
+  max-height: 10pt;
+}
+.logo {
+  color: var(--primary-color);
+}
+/*---------------------------
+# slider
+----------------------------*/
+.slider {
+  height: 80vh;
+  width: var(--max-width);
+  background-image: url(images/slider.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  padding-left: 12vw;
+  overflow: hidden;
+  color: var(--light-color);
+}
+.text {
+  display: grid;
+  font-size: 1rem;
+  width: 40vw;
+  height: 70vh;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+  line-height: 4vh;
+  margin-top: 3vh;
+  overflow: hidden;
+}
+h2 {
+  font-size: 42pt;
+  font-weight: bold;
+  color: var(--category-light);
+}
+.button {
+  background-color: var(--category-light);
+  font-weight: bold;
+  color: var(--category-dark);
+  width: fit-content;
+  padding: 1vw 1vh;
+  border-radius: 5%;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.button > a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-family: myFont;
+}
+/*---------------------------
+# categories
+----------------------------*/
+.categories {
+  width: var(--max-width);
+  max-height: 85vh;
+  display: grid;
+  grid-template-areas: "w" "a";
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+article {
+  grid-area: a;
+  height: 80vh;
+  display: grid;
+  grid-gap: 2vw;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  position: relative;
+}
+.ladies > img,
+.men > img {
+  width: 35vw;
+  height: 60vh;
+  border-radius: 2%;
+}
+.buy {
+  position: absolute;
+  margin-top: -6vh;
+  background-color: var(--category-dark);
+  color: var(--primary-color);
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 35vw;
+  height: 7vh;
+  border-radius: 3%;
+}
+.buy > span {
+  font-size: 15pt;
+  width: 25vw;
+  padding: 1vw 1vh;
+  text-align: center;
+  height: 5vh;
+  border-radius: 3%;
+}
+.buy > a {
+  background-color: burlywood;
+  color: #234;
+  font-size: 15pt;
+  width: 10vw;
+  height: 7vh;
+  padding: 1vw 1vh;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+/*---------------------------
+# products
+----------------------------*/
+.products {
+  max-height: 80vh;
+  width: var(--max-width);
+  background-color: var(--category-dark);
+  display: grid;
+  grid-gap: 2vh;
+  grid-template-areas: "b" "section";
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section {
+  grid-area: section;
+  width: 100vw;
+  height: 70vh;
+  display: grid;
+  grid-gap: 3vw;
+  background-color: #234;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  bottom: 4vh;
+}
+.watch {
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+.watch > span {
+  position: absolute;
+  font-family: watchFont;
+  font-size: 1.2rem;
+  color: #234;
+  background-color: burlywood;
+  text-align: center;
+  right: 1.5vh;
+  margin-top: 2vw;
+  overflow: hidden;
+}
+.watch > img {
+  border-radius: 3%;
+  padding: 2vh 4vw 15vh 4vw;
+  background-color: #fff;
+  min-width: 15vw;
+  overflow: hidden;
+  height: auto;
+}
+.watch > p {
+  display: block;
+  position: absolute;
+  bottom: 8vh;
+  padding-left: 1vh;
+  padding-top: 1vw;
+  width: 16vw;
+  font-size: 13pt;
+  overflow: hidden;
+  text-align: center;
+  color: #234;
+}
+.watch > .desc {
+  display: block;
+  position: absolute;
+  bottom: 2vh;
+  padding-left: 1vh;
+  padding-top: 1vw;
+  width: 18vw;
+  font-size: 13pt;
+  overflow: hidden;
+  text-align: center;
+  color: #234;
+}
+/*---------------------------
+# brands
+----------------------------*/
+.brands {
+  height: 90vh;
+  width: 100vw;
+  display: grid;
+  grid-template-areas: "w" "col";
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.col {
+  display: grid;
+  height: 60vh;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-gap: 2vw;
+  align-items: center;
+}
+.col > img {
+  height: auto;
+  width: 10vw;
+  border: 1px solid var(--line-color);
+  margin: 0 auto;
+  padding: 5vh 2vw;
+  align-items: center;
+  justify-self: center;
+}
+/*---------------------------
+# footer
+----------------------------*/
+footer {
+  max-height: 110vh;
+  width: var(--max-width);
+  display: grid;
+  grid-template-areas: "b" "f" "e";
+  justify-content: center;
+  align-items: center;
+  background-color: var(--category-dark);
+  overflow: hidden;
+}
+.form {
+  grid-area: f;
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  grid-gap: 1vw;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+  overflow: hidden;
+}
+.contactForm {
+  width: 50vw;
+  height: 80vh;
+  text-align: center;
+  padding: 1vw 1vh;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-color);
+}
+#name,
+#subject {
+  width: 24vw;
+  height: 5vh;
+  font-size: 1.2rem;
+  color: var(--form-gray);
+  background-color: var(--category-light);
+  text-align: center;
+}
+#submit {
+  width: 48vw;
+  height: 6vh;
+  margin-top: 2vw;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  color: var(--category-light);
+  background-color: var(--primary-color);
+}
+#search {
+  width: 35vw;
+  height: 5vh;
+  margin-top: 1vw;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--form-gray);
+  background-color: var(--category-light);
+}
+#message {
+  padding-top: 2vw;
+  margin-top: 2vw;
+  width: 48vw;
+  height: 50vh;
+  font-size: 1.4rem;
+  background-color: var(--category-light);
+  color: var(--light-color);
+}
+.searchForm {
+  width: 40vw;
+  height: 80vh;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-color);
+  font-size: 12pt;
+}
+#button {
+  width: 35vw;
+  margin-top: 2vw;
+  height: 6vh;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  color: var(--category-light);
+  background-color: var(--primary-color);
+}
+#textarea {
+  width: 35vw;
+  height: 50vh;
+  margin-top: 2vw;
+  background-color: var(--category-light);
+  color: var(--light-color);
+  text-align: left;
+  font-size: 17pt;
+}
+.end {
+  grid-area: e;
+  width: 100vw;
+  height: 10vh;
+  color: var(--category-light);
+  font-size: 15pt;
+  font-weight: normal;
+  text-align: center;
+  background-color: var(--category-dark);
+}

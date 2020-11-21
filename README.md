@@ -1,4 +1,4 @@
-# WatchStore
+### WatchStore
 ___
 ```
 This project is homework assignment which i 've got from my FrontEnd Dev Professor, 
